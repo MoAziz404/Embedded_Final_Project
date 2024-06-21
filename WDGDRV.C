@@ -20,7 +20,7 @@ WDTCSR |= (1 << WDCE) | (1 << WDE);  // Enable modifications
 WDTCSR = (1 << WDIE) | (1 << WDP1); // 64ms timeout
     
 }
-void WDGDrv_IsrNotification(void){
+void WDGDrv_IsrNotification(void){                // to be configured 
  if (WDGM_PovideSuppervisionStatus() == OK && !WDGM_MainFunction()){
      
          wdt_reset(); 

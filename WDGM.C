@@ -8,11 +8,14 @@
 
 */
 #include "Std_Types.h"
+#include "WDGM.h"
 
+static WDGM_StatusType WDGM_Status = NOK;
+volatile unsigned char LEDM_CallCount = 0;
 
 void WDGM_Init(void)
 {
-
+ LEDM_CallCount = 0;
 }
 
 void WDGM_MainFunction(void)
@@ -22,7 +25,7 @@ void WDGM_MainFunction(void)
 
 void  WDGM_AlivenessIndication(void)
 {
-
+ LEDM_CallCount++;
 }
 
 
